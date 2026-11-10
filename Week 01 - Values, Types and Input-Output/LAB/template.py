@@ -2,8 +2,8 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
+Name  : Ronak Nai
+Lane  :  AI   (delete two)
 Date  :
 
 Run it:   python template.py
@@ -21,10 +21,12 @@ Delete these instructions as you replace them with your code.
 #
 #    Remember: input() always gives back text.
 
-label = ""      # : replace with an input() call
-first = 0.0     # : replace with an input() call, converted
-second = 0.0    # : replace with an input() call, converted
-
+label = input("Enter hostname: ") # : replace with an input() call
+first = float(input("Enter first number: ")) # : replace with an input() call, converted
+second = float(input("Enter second number: ")) # : replace with an input() call, converted
+print(label)
+print(first)
+print(second)
 
 # ================================================================== PROCESS
 # 2. Work out what you were NOT given.       [Typical and above]
@@ -34,8 +36,12 @@ second = 0.0    # : replace with an input() call, converted
 #
 #    Do not type the answers. Calculate them.
 
-difference = 0.0   # 
-percent = 0.0      # 
+difference = first - second   # 
+percent = (first / second)* 100    #
+
+
+print("Difference:", difference)
+print("Percentage:", percent)
 
 
 # =================================================================== OUTPUT
@@ -54,6 +60,15 @@ print(f"  RECORD CHECK  -  {label}")
 print("=" * 34)
 
 # : your report lines go here
+print()
+print("=" * 34)
+print(f"  RECORD CHECK  -  {label}")
+print("=" * 34)
+
+print(f"  First Value : {first:>10.2f}")
+print(f"  Second Value: {second:>10.2f}")
+print(f"  Difference  : {difference:>+10.2f}")
+print(f"  Percentage  : {percent:>10.2f} %")
 
 print("=" * 34)
 

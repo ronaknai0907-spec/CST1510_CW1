@@ -30,6 +30,13 @@ def multioly(n1 ,n2):
 
 def divide(n1 , n2):
     return n1 / n2
+def devide(n1,n2):
+    try:
+        return n1/n2
+    except ZeroDivisionError:
+        print("cannot dievided by 0")
+        return None
+
 
 n1 = float(input('Enter 1st value:'))
 

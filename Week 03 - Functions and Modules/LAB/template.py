@@ -2,8 +2,8 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
+Name  :  Ronak Nai
+Lane  :  AI     (delete two)
 Date  :
 
 Run it:   python template.py
@@ -27,6 +27,22 @@ Delete these instructions as you replace them with your code.
 #    Give each function a one-line docstring saying what it does.
 
 # your function(s) go here
+def status_of(percent):
+    """Return status based on percentage."""
+
+    if percent >= 100:
+        return "OVER LIMIT"
+    elif percent >= 90:
+        return "WARNING"
+    else:
+        return "OK"
+#typical
+def check(value, limit):
+
+    difference = value - limit
+    percent = (value / limit) * 100
+
+    return difference, percent
 
 
 # ==================================================================== INPUT
@@ -36,9 +52,9 @@ Delete these instructions as you replace them with your code.
 #    - the second is a NUMBER (use float(), not int())
 #    - the third  is a NUMBER (use float(), not int())
 
-label = ""      # replace with an input() call
-value = 0.0     # replace with an input() call, converted
-limit = 0.0     # replace with an input() call, converted
+label =  input("Enter label: ")      # replace with an input() call
+value = float(input("Enter value: "))    # replace with an input() call, converted
+limit = float(input("Enter limit: "))     # replace with an input() call, converted
 
 
 # ================================================================== PROCESS
@@ -48,9 +64,9 @@ limit = 0.0     # replace with an input() call, converted
 #                difference and percentage inline, not in a function.
 #    Typical   : call check() to get the difference and percentage instead.
 
-difference = 0.0   # replace with your code
-percent = 0.0       # replace with your code
-status = ""          # replace with your code
+difference = value - limit  # replace with your code
+percent = (value - limit) * 100      # replace with your code
+status = status_of(percent)       # replace with your code
 
 
 # =================================================================== OUTPUT
@@ -69,7 +85,10 @@ print("=" * 34)
 print(f"  RECORD CHECK  -  {label}")
 print("=" * 34)
 
-# your report lines go here
+print(f"  Label  : {label}")
+print(f"  Value  : {value}")
+print(f"  Limit  : {limit}")
+print(f"  Status : {status}")
 
 print("=" * 34)
 
